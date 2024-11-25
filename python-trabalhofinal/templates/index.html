@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Previsões Sul da Ásia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .prediction-card {
+            margin-bottom: 20px;
+        }
+        .positive-variation {
+            color: green;
+            font-weight: bold;
+        }
+        .negative-variation {
+            color: red;
+            font-weight: bold;
+        }
+        .explanation {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .help-icon {
+            cursor: pointer;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Previsões para Países do Sul da Ásia</h1>
+
+        <div class="explanation">
+            <h4>Como interpretar os resultados:</h4>
+            <ul>
+                <li><strong>Valor Atual:</strong> O valor mais recente disponível no conjunto de dados (2023)</li>
+                <li><strong>Previsão:</strong> O valor previsto para o próximo ano (2024)</li>
+                <li><strong>Variação Esperada:</strong> A diferença percentual entre o valor atual e a previsão
+                    <ul>
+                        <li><span class="positive-variation">Verde (positivo)</span>: Indica uma melhoria esperada</li>
+                        <li><span class="negative-variation">Vermelho (negativo)</span>: Indica uma possível deterioração</li>
+                    </ul>
+                </li>
+            </ul>
+            <p><strong>Nota:</strong> Para alguns indicadores, como Taxa de Pobreza e Desemprego, uma variação negativa (vermelho) é positiva, pois significa redução desses índices.</p>
+        </div>
+        
+        <div class="row mb-4">
+            <div class="col">
+                <select id="countrySelect" class="form-select">
+                    <option value="">Selecione um país</option>
+                    {% for country in countries %}
+                    <option value="{{ country }}">{{ country }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <div id="results" class="row">
+            <!-- Resultados serão inseridos aqui -->
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('countrySelect').addEventListener('change', function() {
+            const country = this.value;
+            if (country) {
+                fetch(`/predict/${country}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        const resultsDiv = document.getElementById('results');
+                        resultsDiv.innerHTML = '';
+
+                        for (const [indicator, values] of Object.entries(data)) {
+                            // Determinar se a variação é positiva ou negativa contextualmente
+                            let isPositiveContext = true;
+                            if (indicator.includes("Pobreza") || 
+                                indicator.includes("Desemprego") || 
+                                indicator.includes("Mortalidade")) {
+                                isPositiveContext = false;
+                            }
+                            
+                            const variationClass = (values.variacao >= 0) === isPositiveContext ? 
+                                                 'positive-variation' : 'negative-variation';
+                            
+                            const card = `
+                                <div class="col-md-6">
+                                    <div class="card prediction-card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">${indicator}</h5>
+                                            <p class="card-text">
+                                                Valor Atual (${values.ano_previsao - 1}): ${values.atual.toFixed(2)}%<br>
+                                                Previsão (${values.ano_previsao}): ${values.previsao.toFixed(2)}%<br>
+                                                <span class="${variationClass}">
+                                                    Variação Esperada: ${values.variacao.toFixed(2)}%
+                                                    ${isPositiveContext ? 
+                                                      (values.variacao >= 0 ? '↑' : '↓') : 
+                                                      (values.variacao >= 0 ? '↓' : '↑')}
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+                            
+                            resultsDiv.innerHTML += card;
+                        }
+                    })
+                    .catch(error => console.error('Erro:', error));
+            }
+        });
+    </script>
+</body>
+</html>

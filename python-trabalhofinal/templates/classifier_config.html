@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Configuração de Classificadores - Sul da Ásia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .config-card {
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .nav-pills .nav-link.active {
+            background-color: #0d6efd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-2">
+                <div class="d-flex flex-column flex-shrink-0 p-3 bg-light">
+                    <h5>Navegação</h5>
+                    <hr>
+                    <ul class="nav nav-pills flex-column mb-auto">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">Upload</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/predictions" class="nav-link">Previsões</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/graphs" class="nav-link">Gráficos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/classifier_config" class="nav-link active">Configurar Classificadores</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-10">
+                <h1 class="mb-4">Configuração de Classificadores</h1>
+                
+                <div class="card config-card">
+                    <div class="card-body">
+                        <form method="POST" action="/save_classifier_config">
+                            <div class="mb-3">
+                                <label for="classifier_type" class="form-label">Tipo de Classificador</label>
+                                <select class="form-select" id="classifier_type" name="classifier_type">
+                                    <option value="random_forest" {% if current_config.type == 'random_forest' %}selected{% endif %}>Random Forest</option>
+                                    <option value="gradient_boost" {% if current_config.type == 'gradient_boost' %}selected{% endif %}>Gradient Boosting</option>
+                                    <option value="svm" {% if current_config.type == 'svm' %}selected{% endif %}>Support Vector Machine</option>
+                                </select>
+                            </div>
+
+                            <div id="random_forest_params" class="classifier-params">
+                                <h5>Parâmetros do Random Forest</h5>
+                                <div class="mb-3">
+                                    <label for="n_estimators" class="form-label">Número de Estimadores</label>
+                                    <input type="number" class="form-control" id="n_estimators" name="n_estimators" 
+                                           value="{{ current_config.params.n_estimators|default(100) }}" min="1" max="1000">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="max_depth" class="form-label">Profundidade Máxima</label>
+                                    <input type="number" class="form-control" id="max_depth" name="max_depth" 
+                                           value="{{ current_config.params.max_depth|default(10) }}" min="1" max="100">
+                                </div>
+                            </div>
+
+                            <div id="gradient_boost_params" class="classifier-params" style="display: none;">
+                                <h5>Parâmetros do Gradient Boosting</h5>
+                                <div class="mb-3">
+                                    <label for="learning_rate" class="form-label">Taxa de Aprendizado</label>
+                                    <input type="number" class="form-control" id="learning_rate" name="learning_rate" 
+                                           value="{{ current_config.params.learning_rate|default(0.1) }}" step="0.01" min="0.01" max="1">
+                                </div>
+                            </div>
+
+                            <div id="svm_params" class="classifier-params" style="display: none;">
+                                <h5>Parâmetros do SVM</h5>
+                                <div class="mb-3">
+                                    <label for="kernel" class="form-label">Kernel</label>
+                                    <select class="form-select" id="kernel" name="kernel">
+                                        <option value="rbf" {% if current_config.params.kernel == 'rbf' %}selected{% endif %}>RBF</option>
+                                        <option value="linear" {% if current_config.params.kernel == 'linear' %}selected{% endif %}>Linear</option>
+                                        <option value="poly" {% if current_config.params.kernel == 'poly' %}selected{% endif %}>Polynomial</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Salvar Configurações</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('classifier_type').addEventListener('change', function() {
+            // Esconder todos os parâmetros
+            document.querySelectorAll('.classifier-params').forEach(el => {
+                el.style.display = 'none';
+            });
+            
+            // Mostrar parâmetros do classificador selecionado
+            const selectedType = this.value;
+            document.getElementById(selectedType + '_params').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

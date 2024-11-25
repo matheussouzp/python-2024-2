@@ -1,0 +1,324 @@
+RELATÓRIO DE PREVISÕES PARA PAÍSES DO SUL DA ÁSIA
+Gerado em: 24/11/2024 20:30:29
+================================================================================
+
+
+AFGHANISTAN
+==================================================
+
+Crescimento Populacional
+Modelo utilizado: Random Forest
+Score do modelo: -0.4303
+Atual (2023): 2.67%
+Previsão (2024): 2.66%
+Variação Esperada: -0.30%
+
+Acesso à Água
+Modelo utilizado: Random Forest
+Score do modelo: 0.9605
+Atual (2023): 82.18%
+Previsão (2024): 81.58%
+Variação Esperada: -0.72%
+
+Uso da Internet
+Modelo utilizado: Random Forest
+Score do modelo: 0.9593
+Atual (2023): 18.40%
+Previsão (2024): 18.29%
+Variação Esperada: -0.58%
+
+Matrícula Escolar
+Modelo utilizado: Random Forest
+Score do modelo: 0.8216
+Atual (2023): 110.01%
+Previsão (2024): 110.00%
+Variação Esperada: -0.01%
+
+Área Florestal
+Modelo utilizado: Random Forest
+Score do modelo: 0.0000
+Atual (2023): 1.85%
+Previsão (2024): 1.85%
+Variação Esperada: -0.00%
+
+================================================================================
+
+BHUTAN
+==================================================
+
+Crescimento Populacional
+Modelo utilizado: Random Forest
+Score do modelo: 0.9637
+Atual (2023): 0.63%
+Previsão (2024): 0.65%
+Variação Esperada: 2.34%
+
+Acesso à Água
+Modelo utilizado: Random Forest
+Score do modelo: 0.9683
+Atual (2023): 99.13%
+Previsão (2024): 99.07%
+Variação Esperada: -0.06%
+
+Uso da Internet
+Modelo utilizado: Random Forest
+Score do modelo: 0.9795
+Atual (2023): 86.84%
+Previsão (2024): 85.04%
+Variação Esperada: -2.07%
+
+Matrícula Escolar
+Modelo utilizado: Random Forest
+Score do modelo: 0.9269
+Atual (2023): 106.08%
+Previsão (2024): 104.84%
+Variação Esperada: -1.17%
+
+Área Florestal
+Modelo utilizado: Random Forest
+Score do modelo: 0.9693
+Atual (2023): 71.50%
+Previsão (2024): 71.49%
+Variação Esperada: -0.01%
+
+================================================================================
+
+BANGLADESH
+==================================================
+
+Crescimento Populacional
+Modelo utilizado: Random Forest
+Score do modelo: 0.9316
+Atual (2023): 1.03%
+Previsão (2024): 1.06%
+Variação Esperada: 3.45%
+
+Acesso à Água
+Modelo utilizado: Random Forest
+Score do modelo: 0.9786
+Atual (2023): 98.10%
+Previsão (2024): 98.01%
+Variação Esperada: -0.09%
+
+Uso da Internet
+Modelo utilizado: Random Forest
+Score do modelo: 0.9740
+Atual (2023): 44.50%
+Previsão (2024): 41.54%
+Variação Esperada: -6.65%
+
+Matrícula Escolar
+Modelo utilizado: Random Forest
+Score do modelo: 0.8146
+Atual (2023): 111.60%
+Previsão (2024): 113.60%
+Variação Esperada: 1.80%
+
+Área Florestal
+Modelo utilizado: Random Forest
+Score do modelo: 0.9560
+Atual (2023): 14.47%
+Previsão (2024): 14.47%
+Variação Esperada: 0.02%
+
+================================================================================
+
+INDIA
+==================================================
+
+Crescimento Populacional
+Modelo utilizado: Random Forest
+Score do modelo: 0.9018
+Atual (2023): 0.81%
+Previsão (2024): 0.80%
+Variação Esperada: -0.91%
+
+Acesso à Água
+Modelo utilizado: Random Forest
+Score do modelo: 0.9575
+Atual (2023): 93.30%
+Previsão (2024): 93.11%
+Variação Esperada: -0.20%
+
+Uso da Internet
+Modelo utilizado: Random Forest
+Score do modelo: 0.9225
+Atual (2023): 43.41%
+Previsão (2024): 43.01%
+Variação Esperada: -0.90%
+
+Matrícula Escolar
+Modelo utilizado: Random Forest
+Score do modelo: 0.1983
+Atual (2023): 112.03%
+Previsão (2024): 110.37%
+Variação Esperada: -1.48%
+
+Área Florestal
+Modelo utilizado: Random Forest
+Score do modelo: 0.9498
+Atual (2023): 24.36%
+Previsão (2024): 24.35%
+Variação Esperada: -0.04%
+
+================================================================================
+
+MALDIVES
+==================================================
+
+Crescimento Populacional
+Modelo utilizado: Random Forest
+Score do modelo: 0.2922
+Atual (2023): -0.53%
+Previsão (2024): 0.51%
+Variação Esperada: 196.22%
+
+Acesso à Água
+Modelo utilizado: Random Forest
+Score do modelo: 0.9646
+Atual (2023): 99.56%
+Previsão (2024): 99.50%
+Variação Esperada: -0.05%
+
+Uso da Internet
+Modelo utilizado: Random Forest
+Score do modelo: 0.9893
+Atual (2023): 83.91%
+Previsão (2024): 82.77%
+Variação Esperada: -1.36%
+
+Matrícula Escolar
+Modelo utilizado: Random Forest
+Score do modelo: 0.9672
+Atual (2023): 97.54%
+Previsão (2024): 97.15%
+Variação Esperada: -0.40%
+
+Área Florestal
+Modelo utilizado: Random Forest
+Score do modelo: 0.0000
+Atual (2023): 2.73%
+Previsão (2024): 2.73%
+Variação Esperada: -0.00%
+
+================================================================================
+
+SRI LANKA
+==================================================
+
+Crescimento Populacional
+Modelo utilizado: Random Forest
+Score do modelo: 0.1880
+Atual (2023): -0.65%
+Previsão (2024): -0.20%
+Variação Esperada: 69.63%
+
+Acesso à Água
+Modelo utilizado: Random Forest
+Score do modelo: 0.9281
+Atual (2023): 89.31%
+Previsão (2024): 89.09%
+Variação Esperada: -0.25%
+
+Uso da Internet
+Modelo utilizado: Random Forest
+Score do modelo: 0.9113
+Atual (2023): 50.11%
+Previsão (2024): 46.88%
+Variação Esperada: -6.43%
+
+Matrícula Escolar
+Modelo utilizado: Random Forest
+Score do modelo: 0.8560
+Atual (2023): 95.92%
+Previsão (2024): 96.17%
+Variação Esperada: 0.27%
+
+Área Florestal
+Modelo utilizado: Random Forest
+Score do modelo: 0.8372
+Atual (2023): 34.11%
+Previsão (2024): 34.12%
+Variação Esperada: 0.03%
+
+================================================================================
+
+NEPAL
+==================================================
+
+Crescimento Populacional
+Modelo utilizado: Random Forest
+Score do modelo: 0.6103
+Atual (2023): 1.14%
+Previsão (2024): 1.27%
+Variação Esperada: 12.11%
+
+Acesso à Água
+Modelo utilizado: Random Forest
+Score do modelo: 0.9565
+Atual (2023): 91.24%
+Previsão (2024): 90.93%
+Variação Esperada: -0.33%
+
+Uso da Internet
+Modelo utilizado: Random Forest
+Score do modelo: 0.9626
+Atual (2023): 49.56%
+Previsão (2024): 46.85%
+Variação Esperada: -5.46%
+
+Matrícula Escolar
+Modelo utilizado: Random Forest
+Score do modelo: 0.6260
+Atual (2023): 122.98%
+Previsão (2024): 124.51%
+Variação Esperada: 1.24%
+
+Área Florestal
+Modelo utilizado: Random Forest
+Score do modelo: 0.9280
+Atual (2023): 41.59%
+Previsão (2024): 41.58%
+Variação Esperada: -0.03%
+
+================================================================================
+
+PAKISTAN
+==================================================
+
+Crescimento Populacional
+Modelo utilizado: Random Forest
+Score do modelo: 0.9167
+Atual (2023): 1.96%
+Previsão (2024): 1.87%
+Variação Esperada: -4.38%
+
+Acesso à Água
+Modelo utilizado: Random Forest
+Score do modelo: 0.9555
+Atual (2023): 90.63%
+Previsão (2024): 90.54%
+Variação Esperada: -0.09%
+
+Uso da Internet
+Modelo utilizado: Random Forest
+Score do modelo: 0.9236
+Atual (2023): 32.95%
+Previsão (2024): 30.83%
+Variação Esperada: -6.44%
+
+Matrícula Escolar
+Modelo utilizado: Random Forest
+Score do modelo: 0.8907
+Atual (2023): 82.68%
+Previsão (2024): 82.69%
+Variação Esperada: 0.02%
+
+Área Florestal
+Modelo utilizado: Random Forest
+Score do modelo: 0.9696
+Atual (2023): 4.78%
+Previsão (2024): 4.80%
+Variação Esperada: 0.42%
+
+================================================================================

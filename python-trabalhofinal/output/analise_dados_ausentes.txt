@@ -1,0 +1,36 @@
+Análise de Dados Ausentes
+==================================================
+
+Country: 0.00% ausentes
+Year: 0.00% ausentes
+GDP (current US$): 1.04% ausentes
+GDP growth (annual %): 1.56% ausentes
+GDP per capita (current US$): 1.04% ausentes
+Unemployment, total (% of total labor force) (modeled ILO estimate): 0.00% ausentes
+Inflation, consumer prices (annual %): 4.69% ausentes
+Foreign direct investment, net inflows (% of GDP): 2.60% ausentes
+Trade (% of GDP): 26.56% ausentes
+Gini index: 78.12% ausentes
+Population, total: 0.00% ausentes
+Population growth (annual %): 0.00% ausentes
+Poverty headcount ratio at $2.15 a day (2017 PPP) (% of population): 78.12% ausentes
+Life expectancy at birth, total (years): 4.17% ausentes
+Mortality rate, infant (per 1,000 live births): 4.17% ausentes
+Literacy rate, adult total (% of people ages 15 and above): 68.23% ausentes
+School enrollment, primary (% gross): 13.54% ausentes
+Urban population (% of total population): 0.00% ausentes
+Access to electricity (% of population): 4.17% ausentes
+People using at least basic drinking water services (% of population): 4.17% ausentes
+People using at least basic sanitation services (% of population): 4.17% ausentes
+Carbon dioxide (CO2) emissions excluding LULUCF per capita (t CO2e/capita): 4.17% ausentes
+PM2.5 air pollution, mean annual exposure (micrograms per cubic meter): 12.50% ausentes
+Renewable energy consumption (% of total final energy consumption): 6.77% ausentes
+Forest area (% of land area): 8.33% ausentes
+Control of Corruption: Percentile Rank: 8.33% ausentes
+Political Stability and Absence of Violence/Terrorism: Estimate: 8.33% ausentes
+Regulatory Quality: Estimate: 8.33% ausentes
+Rule of Law: Estimate: 8.33% ausentes
+Voice and Accountability: Estimate: 8.33% ausentes
+Individuals using the Internet (% of population): 9.90% ausentes
+Research and development expenditure (% of GDP): 75.00% ausentes
+High-technology exports (% of manufactured exports): 60.42% ausentes
